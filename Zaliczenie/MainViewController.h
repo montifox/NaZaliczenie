@@ -15,6 +15,8 @@
 @property NSMutableArray *itemARRAY, *costARRAY, *dateARRAY;
     // int
 @property int arrayNUMB, arrayCOUNT;
+    // nsstring
+@property NSString *correctItem, *correctCost;
 
 
 // action
