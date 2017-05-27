@@ -14,11 +14,21 @@
 
 @implementation MainViewController
 
-@synthesize arrayNUMB, arrayCOUNT, costARRAY, dateARRAY, itemARRAY;
+@synthesize arrayNUMB, arrayCOUNT, costARRAY, dateARRAY, itemARRAY, correctItem, correctCost;
 
 
 
 - (void)viewDidLoad {
+    
+    costARRAY = [NSMutableArray array];
+    dateARRAY = [NSMutableArray array];
+    itemARRAY = [NSMutableArray array];
+
+    arrayNUMB = 0;
+    arrayCOUNT = (int) itemARRAY.count;
+    
+    
+    
     [super viewDidLoad];
     
     
@@ -26,7 +36,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -38,5 +47,15 @@
 }
 
 - (IBAction)addBTN:(id)sender {
+    
+    correctItem = _itemTF.text;
+    correctCost = _costTF.text;
+    
+    if((![correctItem  isEqual: @""]) && (![correctCost  isEqual: @""])){
+        NSLog(@"xD");
+    }
+    
+    
+    
 }
 @end
