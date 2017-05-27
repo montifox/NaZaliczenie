@@ -10,4 +10,27 @@
 
 @interface MainViewController : UIViewController
 
+// var
+    // array
+@property NSMutableArray *itemARRAY, *costARRAY, *dateARRAY;
+    // int
+@property int arrayNUMB, arrayCOUNT;
+
+
+// action
+- (IBAction)leftBTN:(id)sender;
+- (IBAction)rightBTN:(id)sender;
+- (IBAction)addBTN:(id)sender;
+
+// outlet
+@property (weak, nonatomic) IBOutlet UILabel *countLAB;
+@property (weak, nonatomic) IBOutlet UILabel *itemLAB;
+@property (weak, nonatomic) IBOutlet UILabel *costLAB;
+@property (weak, nonatomic) IBOutlet UILabel *dateLAB;
+
+@property (weak, nonatomic) IBOutlet UILabel *errorLAB;
+    // inputs
+@property (weak, nonatomic) IBOutlet UITextField *itemTF;
+@property (weak, nonatomic) IBOutlet UITextField *costTF;
+
 @end

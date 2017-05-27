@@ -56,6 +56,9 @@
                                 <state key="normal" title="&lt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="leftBTN:" destination="X1K-9a-fYc" eventType="touchUpInside" id="Pca-fY-9Nn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d13-wB-jnD">
                                 <rect key="frame" x="328" y="28" width="34" height="213"/>
@@ -64,6 +67,9 @@
                                 <state key="normal" title="&gt;">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="rightBTN:" destination="X1K-9a-fYc" eventType="touchUpInside" id="lmh-Sj-XgO"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAi-Wu-hxL">
                                 <rect key="frame" x="16" y="371" width="343" height="30"/>
@@ -86,6 +92,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addBTN:" destination="X1K-9a-fYc" eventType="touchUpInside" id="zkl-Tz-aMf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km3-Ib-SCG">
                                 <rect key="frame" x="16" y="485" width="343" height="21"/>
@@ -97,6 +106,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="costLAB" destination="aEo-OM-CEo" id="JiU-On-Uqf"/>
+                        <outlet property="costTF" destination="Xkd-9v-gam" id="qX9-lO-m2y"/>
+                        <outlet property="countLAB" destination="XrS-XI-TDi" id="n15-Ug-3BJ"/>
+                        <outlet property="dateLAB" destination="uIk-l1-mfv" id="KMC-Oa-xG6"/>
+                        <outlet property="errorLAB" destination="km3-Ib-SCG" id="JEG-Dt-B3n"/>
+                        <outlet property="itemLAB" destination="hcb-pd-HYA" id="fmI-FJ-ckD"/>
+                        <outlet property="itemTF" destination="nAi-Wu-hxL" id="Qfk-i3-523"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWt-7N-bdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

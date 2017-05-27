@@ -34,4 +34,12 @@
 }
 */
 
+- (IBAction)leftBTN:(id)sender {
+}
+
+- (IBAction)rightBTN:(id)sender {
+}
+
+- (IBAction)addBTN:(id)sender {
+}
 @end
