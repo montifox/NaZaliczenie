@@ -52,7 +52,35 @@
     correctCost = _costTF.text;
     
     if((![correctItem  isEqual: @""]) && (![correctCost  isEqual: @""])){
-        NSLog(@"xD");
+        
+        // set date
+        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        
+        [dateARRAY addObject: [dateFormatter stringFromDate:[NSDate date]]];
+        
+        _dateLAB.text = dateARRAY[arrayNUMB];
+        // set item
+        [itemARRAY addObject: correctItem];
+        
+        _itemLAB.text = itemARRAY[arrayNUMB];
+        // set cost
+        [costARRAY addObject:correctCost];
+        _costLAB.text = costARRAY[arrayNUMB];
+        // count
+        arrayCOUNT = (int)itemARRAY.count;
+        [_countLAB setText:[NSString stringWithFormat:@"%d of %d", arrayNUMB +1, arrayCOUNT]];
+        
+        
+        
+        
+        // clear
+        _itemTF.text = @"";
+        _costTF.text = @"";
+        // error lab = false
+        _errorLAB.text = @"GIT";
+    }else{
+        _errorLAB.text = @"Nie git";
     }
     
     
