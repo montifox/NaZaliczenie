@@ -14,7 +14,7 @@
 
 @implementation MainViewController
 
-@synthesize arrayNUMB, arrayCOUNT, costARRAY, dateARRAY, itemARRAY, correctItem, correctCost;
+@synthesize arrayNUMB, arrayCOUNT,sliderCOUNT, costARRAY, dateARRAY, itemARRAY, correctItem, correctCost;
 
 
 
@@ -105,6 +105,12 @@
         _errorLAB.text = @"Nie git";
     }
     
+    
+    
+}
+- (IBAction)slider:(id)sender {
+    
+
     
     
 }

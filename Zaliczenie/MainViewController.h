@@ -14,7 +14,7 @@
     // array
 @property NSMutableArray *itemARRAY, *costARRAY, *dateARRAY;
     // int
-@property int arrayNUMB, arrayCOUNT;
+@property int arrayNUMB, arrayCOUNT, sliderCOUNT;
     // nsstring
 @property NSString *correctItem, *correctCost;
 
@@ -34,5 +34,8 @@
     // inputs
 @property (weak, nonatomic) IBOutlet UITextField *itemTF;
 @property (weak, nonatomic) IBOutlet UITextField *costTF;
+// slider
+- (IBAction)slider:(id)sender;
+
 
 @end
