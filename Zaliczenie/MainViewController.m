@@ -41,9 +41,31 @@
 
 
 - (IBAction)leftBTN:(id)sender {
+    if(arrayNUMB != 0){
+        
+        arrayNUMB--;
+        _itemLAB.text = itemARRAY[arrayNUMB];
+        _costLAB.text = costARRAY[arrayNUMB];
+        _dateLAB.text = dateARRAY[arrayNUMB];
+        // count LBL
+        [_countLAB setText:[NSString stringWithFormat:@"%d of %d", arrayNUMB +1, arrayCOUNT]];
+        
+    }
+
+    
 }
 
 - (IBAction)rightBTN:(id)sender {
+    if(arrayNUMB  != (arrayCOUNT - 1)){
+        
+        arrayNUMB++;
+        _itemLAB.text = itemARRAY[arrayNUMB];
+        _costLAB.text = costARRAY[arrayNUMB];
+        _dateLAB.text = dateARRAY[arrayNUMB];
+        // count LBL
+        [_countLAB setText:[NSString stringWithFormat:@"%d of %d", arrayNUMB +1, arrayCOUNT]];
+        
+    }
 }
 
 - (IBAction)addBTN:(id)sender {
