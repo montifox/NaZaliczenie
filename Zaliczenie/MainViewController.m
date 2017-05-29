@@ -58,6 +58,8 @@
 - (IBAction)rightBTN:(id)sender {
     if(arrayNUMB  != (arrayCOUNT - 1)){
         
+        
+    
         arrayNUMB++;
         _itemLAB.text = itemARRAY[arrayNUMB];
         _costLAB.text = costARRAY[arrayNUMB];
