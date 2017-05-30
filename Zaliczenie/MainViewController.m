@@ -41,7 +41,7 @@
 
 
 - (IBAction)leftBTN:(id)sender {
-    if(arrayNUMB != 0){
+    if(arrayNUMB > 0){
         
         arrayNUMB--;
         _itemLAB.text = itemARRAY[arrayNUMB];
@@ -50,13 +50,16 @@
         // count LBL
         [_countLAB setText:[NSString stringWithFormat:@"%d of %d", arrayNUMB +1, arrayCOUNT]];
         
+        NSLog(@"ArrNumb: %d   ArrCount %d", arrayNUMB ,arrayCOUNT);
+        
     }
 
     
 }
 
 - (IBAction)rightBTN:(id)sender {
-    if(arrayNUMB  != (arrayCOUNT - 1)){
+    
+    if((arrayNUMB  != arrayCOUNT) && (arrayNUMB  != arrayCOUNT - 1)){
         
         arrayNUMB++;
         _itemLAB.text = itemARRAY[arrayNUMB];
@@ -64,6 +67,8 @@
         _dateLAB.text = dateARRAY[arrayNUMB];
         // count LBL
         [_countLAB setText:[NSString stringWithFormat:@"%d of %d", arrayNUMB +1, arrayCOUNT]];
+        
+        NSLog(@"ArrNumb: %d   ArrCount %d", arrayNUMB ,arrayCOUNT);
         
     }
 }
@@ -107,5 +112,50 @@
     
     
     
+}
+
+- (IBAction)deleteBTN:(id)sender {
+    
+    arrayCOUNT = (int)itemARRAY.count;
+    
+    if (arrayCOUNT > 0){
+        if(arrayNUMB  > 0){
+            
+            
+            
+            [dateARRAY removeObjectAtIndex: arrayNUMB];
+            [itemARRAY removeObjectAtIndex: arrayNUMB];
+            [costARRAY removeObjectAtIndex: arrayNUMB];
+            
+            arrayNUMB--;
+            arrayCOUNT--;
+            
+            _itemLAB.text = itemARRAY[arrayNUMB];
+            _costLAB.text = costARRAY[arrayNUMB];
+            _dateLAB.text = dateARRAY[arrayNUMB];
+            // count LBL
+            [_countLAB setText:[NSString stringWithFormat:@"%d of %d", arrayNUMB +1, arrayCOUNT]];
+            
+            NSLog(@"ArrNumb: %d   ArrCount %d", arrayNUMB ,arrayCOUNT);
+        }else if (arrayNUMB  == 0){
+            [dateARRAY removeObjectAtIndex: arrayNUMB];
+            [itemARRAY removeObjectAtIndex: arrayNUMB];
+            [costARRAY removeObjectAtIndex: arrayNUMB];
+            
+            
+            _itemLAB.text = @"";
+            _costLAB.text = @"";
+            _dateLAB.text = @"";
+            
+            [_countLAB setText:[NSString stringWithFormat:@"0 of 0"]];
+            //arrayNUMB--;
+            arrayCOUNT = (int)itemARRAY.count;
+            
+            
+            NSLog(@"ArrNumb: %d   ArrCount %d", arrayNUMB ,arrayCOUNT);
+            
+        }
+
+    }
 }
 @end
